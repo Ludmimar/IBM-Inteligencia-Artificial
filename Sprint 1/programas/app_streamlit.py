@@ -20,6 +20,7 @@ Ejecución:
 import streamlit as st
 import csv
 import pandas as pd
+import os
 from typing import List, Dict
 
 # Configuración de la página
@@ -31,7 +32,20 @@ st.set_page_config(
 )
 
 # Constantes
-ARCHIVO_CSV = "../datos/tienda_aurelion.csv"
+# Detectar automáticamente la ruta correcta del CSV
+def obtener_ruta_csv():
+    """Obtiene la ruta correcta del CSV independientemente de desde dónde se ejecute."""
+    rutas_posibles = [
+        "../datos/tienda_aurelion.csv",  # Ejecutando desde programas/
+        "datos/tienda_aurelion.csv",      # Ejecutando desde Sprint 1/
+        "Sprint 1/datos/tienda_aurelion.csv"  # Ejecutando desde raíz del repo
+    ]
+    for ruta in rutas_posibles:
+        if os.path.exists(ruta):
+            return ruta
+    return "../datos/tienda_aurelion.csv"  # Por defecto
+
+ARCHIVO_CSV = obtener_ruta_csv()
 UMBRAL_STOCK_BAJO = 20
 
 # Estilos CSS personalizados

@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 Todos los programas ya están configurados para buscar los datos en:
 ```
-../datos/tienda_aurelion.csv
+datos/tienda_aurelion.csv
 ```
 
 Esto significa que funcionan tanto si:
@@ -226,6 +226,6 @@ Sube toda la carpeta `Entregable/` con su estructura de subcarpetas:
 
 ---
 
-**🎊 ¡Tu proyecto está organizado profesionalmente!** ⚔️✨
+
 
 
