@@ -1,0 +1,35 @@
+# ================================================
+# TIENDA AURELION - Dependencias del Proyecto
+# Sprint 1 - Introducción a la IA - IBM
+#
+# Autor: Martos Ludmila
+# DNI: 34811650
+# ================================================
+
+# NOTA: La versión de consola (tienda_aurelion.py) NO requiere
+# dependencias externas. Solo usa librerías estándar de Python.
+
+# ================================================
+# Para Aplicación Web Streamlit
+# ================================================
+streamlit>=1.28.0
+pandas>=2.0.0
+
+# ================================================
+# Para Jupyter Notebook (Opcional)
+# ================================================
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# ================================================
+# Instalación:
+# ================================================
+# Instalar todo:
+#   pip install -r requirements.txt
+#
+# Solo Streamlit (app web):
+#   pip install streamlit pandas
+#
+# Solo Jupyter (notebook):
+#   pip install jupyter notebook
+# ================================================

@@ -1,0 +1,52 @@
+-- Valor Total Inventario
+Valor Total Inventario = 
+SUMX(
+    Productos,
+    Productos[precio] * Productos[stock]
+)
+
+-- Precio Promedio
+Precio Promedio = AVERAGE(Productos[precio])
+
+-- Stock Total
+Stock Total = SUM(Productos[stock])
+
+-- Productos con Stock Bajo
+Productos Stock Bajo = 
+COUNTROWS(
+    FILTER(Productos, Productos[stock] <= 20)
+)
+
+-- % Stock Saludable
+% Stock Saludable = 
+DIVIDE(
+    COUNTROWS(FILTER(Productos, Productos[stock] > 20)),
+    COUNTROWS(Productos),
+    0
+) * 100
+
+-- Valor por Producto (para Top N)
+Valor por Producto = SUMX( VALUES(Productos[id]), FIRSTNONBLANK(Productos[precio],0) * FIRSTNONBLANK(Productos[stock],0) )
+
+-- Producto Más Caro (nombre)
+Producto Más Caro = 
+TOPN(1, Productos, Productos[precio], DESC)
+-- Nota: para mostrar sólo el nombre podés crear una medida que use CONCATENATEX:
+Producto Más Caro Nombre = 
+CONCATENATEX( TOPN(1, ALL(Productos), Productos[precio], DESC), Productos[nombre], ", " )
+
+-- Valor Promedio por Producto
+Valor Promedio por Producto = 
+DIVIDE(
+    [Valor Total Inventario],
+    COUNTROWS(Productos),
+    0
+)
+
+-- Días Estimados de Inventario (asumiendo 5 ventas/día)
+Días de Inventario = 
+DIVIDE(
+    [Stock Total],
+    5,
+    0
+)
