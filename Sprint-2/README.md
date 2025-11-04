@@ -753,3 +753,14 @@ El código está completamente documentado y diseñado para ser educativo y fác
 
 **Recomendación:** Usa **Streamlit** para presentaciones impactantes, **Jupyter** para documentación educativa, y **Consola** para uso rápido sin instalaciones.
 
+---
+
+## 👨‍💻 Autor
+
+**Desarrollador**: Ludmila Martos
+
+## 📞 Contacto
+
+- **Email**: [ludmilamartos@gmail.com](mailto:ludmilamartos@gmail.com)
+- **LinkedIn**: [ludmimar89](https://www.linkedin.com/in/ludmimar89/)
+- **GitHub**: [Ludmimar](https://github.com/Ludmimar)

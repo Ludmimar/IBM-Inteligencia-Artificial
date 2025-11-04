@@ -539,14 +539,16 @@ Este proyecto es parte del programa educativo de IBM y está destinado únicamen
 
 ---
 
-## 🙏 Agradecimientos
+## 👨‍💻 Autor
 
-- **IBM** por el programa de Inteligencia Artificial
-- **Python Software Foundation** por Python
-- **Streamlit** por el framework de aplicaciones web
-- **Comunidad Open Source** por las herramientas utilizadas
+**Desarrollador**: Ludmila Martos
 
----
+## 📞 Contacto
+
+- **Email**: [ludmilamartos@gmail.com](mailto:ludmilamartos@gmail.com)
+- **LinkedIn**: [ludmimar89](https://www.linkedin.com/in/ludmimar89/)
+- **GitHub**: [Ludmimar](https://github.com/Ludmimar)
+
 
 <p align="center">
   <strong>⚔️ Tienda Aurelion - Donde la magia y la tecnología se encuentran ✨</strong>
