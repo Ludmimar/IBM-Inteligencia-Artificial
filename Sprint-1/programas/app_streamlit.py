@@ -37,8 +37,8 @@ def obtener_ruta_csv():
     """Obtiene la ruta correcta del CSV independientemente de desde dónde se ejecute."""
     rutas_posibles = [
         "../datos/tienda_aurelion.csv",  # Ejecutando desde programas/
-        "datos/tienda_aurelion.csv",      # Ejecutando desde Sprint 1/
-        "Sprint 1/datos/tienda_aurelion.csv"  # Ejecutando desde raíz del repo
+        "datos/tienda_aurelion.csv",      # Ejecutando desde Sprint-1/
+        "Sprint-1/datos/tienda_aurelion.csv"  # Ejecutando desde raíz del repo
     ]
     for ruta in rutas_posibles:
         if os.path.exists(ruta):

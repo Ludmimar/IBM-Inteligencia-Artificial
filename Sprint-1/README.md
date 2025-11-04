@@ -22,12 +22,24 @@
 
 > ⚠️ **IMPORTANTE**: Ejecuta estos comandos desde la carpeta raíz `Entregable/`
 
+### 🌐 Demo en Línea
+
+**🎯 Prueba la aplicación web ahora mismo:**
+- 🔗 **Demo en vivo**: [https://tienda-aurelion.streamlit.app/](https://tienda-aurelion.streamlit.app/)
+
+> ✨ No requiere instalación, solo abre el enlace en tu navegador
+
 ### 🖥️ Opción 1: Programa de Consola (Sin instalaciones)
 ```bash
 python programas/tienda_aurelion.py
 ```
 
 ### 🌐 Opción 2: Aplicación Web ⭐ RECOMENDADO
+
+**🌐 Demo en línea (sin instalación):**
+- 🔗 [https://tienda-aurelion.streamlit.app/](https://tienda-aurelion.streamlit.app/)
+
+**O ejecuta localmente:**
 ```bash
 # Instalar dependencias (solo primera vez)
 pip install streamlit pandas
