@@ -121,6 +121,14 @@ Evolución del Sprint 1 con mejoras significativas: base de datos normalizada, g
   - `detalle_ventas.csv` - 273 detalles de ventas
 - 👥 **Gestión completa de clientes** con estadísticas
 - 💰 **Sistema de ventas** con detalle de transacciones
+- 📊 **Dashboard Power BI Desktop profesional**:
+  - Archivo `.pbix` completo listo para usar ⭐
+  - Plantilla `.pbit` para personalizar
+  - 8 KPIs principales con visualizaciones interactivas
+  - Filtros dinámicos y cross-filtering automático
+  - Tema medieval personalizado
+  - Guía paso a paso de creación incluida
+  - Integrado con la aplicación Streamlit
 - 📊 **Análisis estadístico completo**:
   - Estadísticas descriptivas básicas
   - Identificación de distribución de variables
@@ -133,7 +141,7 @@ Evolución del Sprint 1 con mejoras significativas: base de datos normalizada, g
 ### 🚀 Demo Rápida
 
 ```bash
-# Opción 1: Aplicación Web (Recomendado)
+# Opción 1: Aplicación Web Streamlit (Recomendado)
 cd "Sprint-2"
 pip install streamlit pandas numpy matplotlib seaborn scipy
 streamlit run programas/app_streamlit.py
@@ -142,7 +150,19 @@ streamlit run programas/app_streamlit.py
 La aplicación se abrirá automáticamente en tu navegador en `http://localhost:8501`
 
 ```bash
-# Opción 2: Análisis Estadístico Completo
+# Opción 2: Dashboard Power BI Desktop (Profesional) ⭐
+cd "Sprint-2"
+# Opción A: Abrir archivo completo (.pbix)
+start Tienda_Aurelion_Dashboard_Sprint2.pbix
+
+# Opción B: Usar plantilla (.pbit)
+start Tienda_Aurelion_Dashboard_Sprint2.pbit
+```
+
+**Requisito:** Microsoft Power BI Desktop (gratis) - [Descargar aquí](https://powerbi.microsoft.com/desktop/)
+
+```bash
+# Opción 3: Análisis Estadístico Completo
 cd "Sprint-2"
 python programas/analisis_estadistico.py
 ```
@@ -152,7 +172,7 @@ Esto generará:
 - 3 gráficos profesionales en `graficos/`
 
 ```bash
-# Opción 2b: Análisis Estadístico en Jupyter (Recomendado)
+# Opción 4: Análisis Estadístico en Jupyter (Interactivo)
 cd "Sprint-2"
 jupyter notebook programas/analisis_estadistico.ipynb
 ```
@@ -160,7 +180,7 @@ jupyter notebook programas/analisis_estadistico.ipynb
 Interfaz interactiva con código ejecutable y visualizaciones integradas.
 
 ```bash
-# Opción 3: Programa de Consola (Sin instalaciones)
+# Opción 5: Programa de Consola (Sin instalaciones)
 cd "Sprint-2"
 python programas/tienda_aurelion.py
 ```
@@ -177,9 +197,13 @@ Toda la documentación del Sprint 2 está disponible en la carpeta correspondien
 #### Documentación Técnica
 
 - 📁 **[documentacion/ANALISIS_ESTADISTICO.md](Sprint-2/documentacion/ANALISIS_ESTADISTICO.md)** ⭐ - Análisis estadístico completo
+- 📁 **[documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md](Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md)** ⭐⭐ - Guía paso a paso del dashboard Power BI
+- 📁 **[documentacion/COMO_CREAR_DASHBOARD_POWERBI.md](Sprint-2/documentacion/COMO_CREAR_DASHBOARD_POWERBI.md)** - Guía maestra de Power BI
+- 📁 **[documentacion/CHECKLIST_DASHBOARD.md](Sprint-2/documentacion/CHECKLIST_DASHBOARD.md)** - Lista de verificación del dashboard
+- 📁 **[documentacion/LAYOUT_VISUAL_DASHBOARD.md](Sprint-2/documentacion/LAYOUT_VISUAL_DASHBOARD.md)** - Vista previa visual
 - 📁 **[documentacion/PSEUDOCODIGO_Y_DIAGRAMAS.md](Sprint-2/documentacion/PSEUDOCODIGO_Y_DIAGRAMAS.md)** - Algoritmos y diagramas de flujo
 - 📁 **[documentacion/SUGERENCIAS_COPILOT.md](Sprint-2/documentacion/SUGERENCIAS_COPILOT.md)** - Sugerencias de IA evaluadas
-- 📁 **[documentacion/GUIA_POWER_BI.md](Sprint-2/documentacion/GUIA_POWER_BI.md)** - Guía para crear dashboard
+- 📁 **[documentacion/GUIA_POWER_BI.md](Sprint-2/documentacion/GUIA_POWER_BI.md)** - Guía general de Power BI
 - 📁 **[documentacion/GUIA_PRESENTACION.md](Sprint-2/documentacion/GUIA_PRESENTACION.md)** - Guía para presentaciones
 - 📁 **[documentacion/INSTRUCCIONES_STREAMLIT.md](Sprint-2/documentacion/INSTRUCCIONES_STREAMLIT.md)** - Guía de la app web
 
@@ -190,10 +214,18 @@ Toda la documentación del Sprint 2 está disponible en la carpeta correspondien
   - Ingresos totales: 231,485 monedas
   - Valor inventario: 1,909,400 monedas
   - Stock total: 4,585 unidades
-- **Líneas de código:** ~2,500+ (Python)
-- **Archivos:** 20+ archivos principales
-- **Documentación:** 10+ archivos Markdown (~80 páginas)
-- **Gráficos:** 3 gráficos profesionales generados + visualizaciones interactivas en Streamlit
+- **Dashboard Power BI:** ⭐
+  - 2 archivos (.pbix y .pbit)
+  - 8 KPIs principales
+  - 10+ visualizaciones interactivas
+  - Filtros dinámicos y cross-filtering
+  - 8 queries M (4 con rutas absolutas, 4 con relativas)
+  - 8 medidas DAX (2 versiones: completas y simplificadas)
+  - Tema medieval personalizado
+- **Líneas de código:** ~2,500+ (Python) + ~200 (DAX/M)
+- **Archivos:** 25+ archivos principales
+- **Documentación:** 15+ archivos Markdown (~100 páginas)
+- **Gráficos:** 3 gráficos profesionales generados + visualizaciones interactivas en Streamlit + Dashboard Power BI
 - **Análisis estadístico:** Completo con correlaciones y outliers, integrado en la aplicación web
 - **Dependencias externas:** 0 (versión consola) / 7 (versión completa)
 
@@ -292,48 +324,61 @@ IBM-Inteligencia-Artificial/
     ├── 📄 INICIO_RAPIDO.md             Guía de inicio rápido
     ├── 📄 INSTRUCCIONES.md             Instrucciones de uso
     ├── 📄 RESUMEN_FINAL.md             Resumen ejecutivo
-    ├── 📄 VERIFICACION_ARCHIVOS.md     Verificación de archivos ⭐
-    ├── 📄 ACTUALIZACION_DOCUMENTACION.md  Historial de actualizaciones ⭐
+    ├── 📄 ORGANIZACION_ARCHIVOS.md     Estructura del proyecto ⭐
     ├── 📄 requirements.txt             Dependencias
+    ├── 📄 .gitignore                   Configuración de Git
+    ├── 📄 Tienda_Aurelion_Dashboard_Sprint2.pbix  Dashboard Power BI completo ⭐⭐
+    ├── 📄 Tienda_Aurelion_Dashboard_Sprint2.pbit  Plantilla Power BI ⭐⭐
     │
     ├── datos/                          Base de datos normalizada
     │   ├── productos.csv               80 productos
     │   ├── clientes.csv                50 clientes
     │   ├── ventas.csv                  100 ventas
-    │   ├── detalle_ventas.csv          273 detalles de ventas
-    │   └── tienda_aurelion.pbix        Dashboard Power BI (opcional)
+    │   └── detalle_ventas.csv          273 detalles de ventas
     │
-    ├── programas/                      Código fuente (5 versiones)
+    ├── programas/                      Código fuente (6 versiones)
     │   ├── tienda_aurelion.py          Programa de consola mejorado
     │   ├── app_streamlit.py            Aplicación web mejorada ⭐
     │   ├── tienda_aurelion.ipynb       Jupyter Notebook
     │   ├── analisis_estadistico.py     Análisis estadístico completo ⭐
-    │   └── analisis_estadistico.ipynb  Notebook de análisis estadístico ⭐⭐
+    │   ├── analisis_estadistico.ipynb  Notebook de análisis estadístico ⭐⭐
+    │   └── validar_datos_powerbi.py    Validador de datos para Power BI
     │
     ├── graficos/                       Gráficos generados automáticamente
     │   ├── grafico1_distribucion_precios.png
     │   ├── grafico2_matriz_correlacion.png
     │   └── grafico3_outliers_ventas.png
     │
-    ├── documentacion/                  Documentación técnica
+    ├── documentacion/                  Documentación técnica (12 guías)
     │   ├── INDICE_PROYECTO.md
     │   ├── ANALISIS_ESTADISTICO.md     Análisis completo ⭐
+    │   ├── GUIA_RAPIDA_DASHBOARD_POWERBI.md  Guía paso a paso Power BI ⭐⭐
+    │   ├── COMO_CREAR_DASHBOARD_POWERBI.md   Guía maestra Power BI
+    │   ├── CHECKLIST_DASHBOARD.md      Lista de verificación
+    │   ├── LAYOUT_VISUAL_DASHBOARD.md  Vista previa visual
+    │   ├── RESUMEN_DASHBOARD_POWERBI.md  Resumen del dashboard
     │   ├── PSEUDOCODIGO_Y_DIAGRAMAS.md
     │   ├── SUGERENCIAS_COPILOT.md
-    │   ├── GUIA_POWER_BI.md
+    │   ├── GUIA_POWER_BI.md            Guía general
     │   ├── GUIA_PRESENTACION.md
     │   └── INSTRUCCIONES_STREAMLIT.md
     │
-    └── Power BI/                       Recursos Power BI (actualizados)
+    └── Power BI/                       Recursos Power BI (completos) ⭐⭐
         ├── README.md
-        ├── measures.dax                Medidas DAX para 4 tablas ⭐
-        ├── query.m                      Query principal
-        ├── query_productos.m           Query individual productos ⭐
-        ├── query_clientes.m             Query individual clientes ⭐
-        ├── query_ventas.m               Query individual ventas ⭐
-        ├── query_detalle_ventas.m       Query individual detalles ⭐
-        ├── theme.json
-        └── layout_instructions.md       Instrucciones actualizadas ⭐
+        ├── measures.dax                Medidas DAX originales
+        ├── measures_SIMPLIFICADAS.dax  Medidas DAX simplificadas
+        ├── measures_SIN_COLUMNAS_CALCULADAS.dax  Medidas sin dependencias
+        ├── query_productos.m           Query productos (relativa)
+        ├── query_clientes.m            Query clientes (relativa)
+        ├── query_ventas.m              Query ventas (relativa)
+        ├── query_detalle_ventas.m      Query detalles (relativa)
+        ├── query_productos_RUTA_ABSOLUTA.m     Query productos (absoluta)
+        ├── query_clientes_RUTA_ABSOLUTA.m      Query clientes (absoluta)
+        ├── query_ventas_RUTA_ABSOLUTA.m        Query ventas (absoluta)
+        ├── query_detalle_ventas_RUTA_ABSOLUTA.m  Query detalles (absoluta)
+        ├── theme.json                  Tema medieval personalizado
+        ├── layout_instructions.md      Instrucciones de layout
+        └── Sprint2.pbit                Plantilla alternativa
 ```
 
 ---
@@ -375,6 +420,7 @@ IBM-Inteligencia-Artificial/
 
 - **Nueva en el proyecto?** → Lee [Sprint-2/INICIO_RAPIDO.md](Sprint-2/INICIO_RAPIDO.md)
 - **Quieres ejecutar el programa?** → Lee [Sprint-2/INSTRUCCIONES.md](Sprint-2/INSTRUCCIONES.md)
+- **Quieres crear el dashboard Power BI?** → Lee [Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md](Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md) ⭐⭐
 - **Buscas análisis estadístico?** → Lee [Sprint-2/documentacion/ANALISIS_ESTADISTICO.md](Sprint-2/documentacion/ANALISIS_ESTADISTICO.md) ⭐
 - **Buscas documentación completa?** → Lee [Sprint-2/README.md](Sprint-2/README.md)
 
@@ -384,9 +430,11 @@ IBM-Inteligencia-Artificial/
 - **Análisis de decisiones técnicas?** → [Sprint-1/documentacion/SUGERENCIAS_COPILOT.md](Sprint-1/documentacion/SUGERENCIAS_COPILOT.md) o [Sprint-2/documentacion/SUGERENCIAS_COPILOT.md](Sprint-2/documentacion/SUGERENCIAS_COPILOT.md)
 - **Guía de Streamlit?** → [Sprint-1/documentacion/INSTRUCCIONES_STREAMLIT.md](Sprint-1/documentacion/INSTRUCCIONES_STREAMLIT.md) o [Sprint-2/documentacion/INSTRUCCIONES_STREAMLIT.md](Sprint-2/documentacion/INSTRUCCIONES_STREAMLIT.md)
 
-### Para Presentaciones
+### Para Presentaciones y Dashboards
 
-- **Crear dashboard en Power BI?** → [Sprint-1/documentacion/GUIA_POWER_BI.md](Sprint-1/documentacion/GUIA_POWER_BI.md) o [Sprint-2/documentacion/GUIA_POWER_BI.md](Sprint-2/documentacion/GUIA_POWER_BI.md)
+- **Crear dashboard en Power BI (Sprint 1)?** → [Sprint-1/documentacion/GUIA_POWER_BI.md](Sprint-1/documentacion/GUIA_POWER_BI.md)
+- **Crear dashboard en Power BI (Sprint 2 - Completo)?** → [Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md](Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md) ⭐⭐
+- **Usar dashboard Power BI ya creado (Sprint 2)?** → Abre `Sprint-2/Tienda_Aurelion_Dashboard_Sprint2.pbix` ⭐
 - **Preparar presentación oral?** → [Sprint-1/documentacion/GUIA_PRESENTACION.md](Sprint-1/documentacion/GUIA_PRESENTACION.md) o [Sprint-2/documentacion/GUIA_PRESENTACION.md](Sprint-2/documentacion/GUIA_PRESENTACION.md)
 
 ---
@@ -456,18 +504,30 @@ Evolución del Sprint 1 con mejoras significativas:
 - 🗄️ **Base de datos normalizada** con 4 tablas relacionadas (80 productos, 50 clientes, 100 ventas)
 - 👥 **Gestión de clientes** completa con estadísticas y análisis
 - 💰 **Sistema de ventas** con detalle de transacciones (273 detalles)
+- 📊 **Dashboard Power BI Desktop profesional** ⭐⭐:
+  - Archivo `.pbix` completo listo para usar
+  - Plantilla `.pbit` para personalizar
+  - 8 KPIs principales (Valor Inventario, Stock Total, Ingresos, etc.)
+  - 10+ visualizaciones interactivas (gráficos, tablas, tarjetas)
+  - Filtros dinámicos por categoría y ciudad
+  - Cross-filtering automático entre visuales
+  - Tema medieval personalizado (colores oro, rojo oscuro, azul marino)
+  - Guía paso a paso completa de creación
+  - Integrado en la aplicación Streamlit
+  - 8 queries M (4 con rutas relativas + 4 con absolutas)
+  - 3 versiones de medidas DAX (originales, simplificadas, sin columnas calculadas)
 - 📊 **Análisis estadístico completo**:
   - Estadísticas descriptivas básicas
   - Identificación de distribución de variables
   - Análisis de correlaciones entre variables principales
   - Detección de outliers (valores extremos)
-  - Al menos 3 gráficos representativos
+  - 3 gráficos representativos generados automáticamente
   - Interpretación de resultados orientada al problema
   - **Integrado en Streamlit** con descripciones detalladas en cada gráfico ⭐
 - 📈 **Visualizaciones avanzadas** con matplotlib y seaborn
 - 🔍 **Búsqueda mejorada** con relaciones entre tablas
-- 📚 **Documentación ampliada** (~80 páginas)
-- 📊 **Power BI actualizado** con queries individuales y medidas DAX para análisis de ventas y clientes
+- 📚 **Documentación ampliada** (~100 páginas)
+- 🎨 **Todas las apps mencionan Power BI** (Streamlit, consola, notebooks)
 
 ### Próximos Sprints
 
@@ -479,18 +539,19 @@ Este repositorio se actualizará con nuevos proyectos a medida que avance el pro
 
 | Aspecto | Sprint 1 | Sprint 2 |
 |---------|----------|----------|
-| **Versiones** | 3 (Consola, Web, Notebook) | 5 (Consola, Web, Notebook, Análisis Python, Análisis Notebook) |
+| **Versiones** | 3 (Consola, Web, Notebook) | 6 (Consola, Web, Notebook, Análisis Python, Análisis Notebook, **Power BI Desktop**) ⭐ |
 | **Base de Datos** | 1 archivo CSV (20 productos) | 4 archivos CSV normalizados (80 productos, 50 clientes, 100 ventas) |
 | **Gestión de Clientes** | ❌ | ✅ Completa |
 | **Sistema de Ventas** | ❌ | ✅ Completo con detalles |
 | **Análisis Estadístico** | Básico | ✅ Completo + Integrado en Streamlit |
 | **Interfaz Web** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ Mejorada con análisis estadístico |
-| **Documentación** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ Ampliada (~80 páginas) |
-| **Código** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ (~2,500+ líneas) |
-| **Gráficos** | Interactivos básicos | Profesionales + Descripciones detalladas |
+| **Dashboard Power BI** | Guía básica | ✅ **Dashboard completo (.pbix + .pbit)** con 8 KPIs y 10+ visualizaciones ⭐⭐ |
+| **Documentación** | ⭐⭐⭐⭐⭐ (~50 páginas) | ⭐⭐⭐⭐⭐ Ampliada (~100 páginas) |
+| **Código** | ⭐⭐⭐⭐⭐ (~1,200 líneas) | ⭐⭐⭐⭐⭐ (~2,700+ líneas Python + DAX/M) |
+| **Gráficos** | Interactivos básicos | Profesionales + Descripciones detalladas + Power BI |
 | **Escalabilidad** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **UX** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Power BI** | 1 query | 4 queries individuales + medidas DAX actualizadas |
+| **Queries Power BI** | 1 query básica | 8 queries M (4 relativas + 4 absolutas) + 8 medidas DAX (3 versiones) |
 
 ---
 
@@ -560,16 +621,27 @@ Este proyecto es parte del programa educativo de IBM y está destinado únicamen
 
 ---
 
-**Última actualización:** Enero 2025  
-**Versión:** 2.1  
-**Estado:** ✅ Sprint 1 Completo | ✅ Sprint 2 Completo y Actualizado
+**Última actualización:** Noviembre 2025  
+**Versión:** 2.5 - Power BI Desktop Edition  
+**Estado:** ✅ Sprint 1 Completo | ✅ Sprint 2 Completo con Dashboard Power BI Profesional ⭐⭐
 
-### 📈 Últimas Actualizaciones (Sprint 2)
+### 📈 Últimas Actualizaciones (Sprint 2 - Noviembre 2025)
 
+- ✅ **Dashboard Power BI Desktop completo:** Archivo `.pbix` y `.pbit` listos para usar ⭐⭐
+  - 8 KPIs principales con visualizaciones interactivas
+  - 10+ gráficos profesionales (barras, líneas, scatter, donut, tablas)
+  - Tema medieval personalizado (oro, rojo oscuro, azul marino)
+  - Cross-filtering automático y filtros dinámicos
+  - 3 versiones de medidas DAX para diferentes escenarios
+  - 8 queries M (relativas y absolutas)
+  - Guía paso a paso completa (30 minutos)
+  - Integrado en aplicación Streamlit con página dedicada
+- ✅ **Todas las apps mencionan Power BI:** Streamlit, consola, notebooks con referencias cruzadas
 - ✅ **Base de datos expandida:** 80 productos, 50 clientes, 100 ventas, 273 detalles
 - ✅ **Análisis estadístico integrado** en Streamlit con descripciones detalladas en cada gráfico
-- ✅ **Power BI actualizado** con queries individuales y medidas DAX para análisis de ventas y clientes
-- ✅ **Documentación completa** actualizada con todas las estadísticas actuales
+- ✅ **Documentación reorganizada:** Archivos Power BI en `documentacion/` para mejor organización
+- ✅ **Documentación completa** actualizada con todas las estadísticas actuales (~100 páginas)
 - ✅ **Notebook de análisis estadístico** (`analisis_estadistico.ipynb`) para análisis interactivo
 - ✅ **Sistema de ventas completo** con historial y detalles de transacciones
+- ✅ **.gitignore configurado** para entregas limpias del proyecto
 
